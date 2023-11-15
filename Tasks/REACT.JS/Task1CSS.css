@@ -1,0 +1,92 @@
+.word-counter {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: block;
+  text-align: center; /* Center the content horizontally */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width:90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+p {
+  text-align: left;
+  margin-top: 10px;
+  padding-left:10px;
+  font-weight: bold;
+}
+/* Small devices (sm) */
+@media (max-width: 576px) {
+  .word-counter {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (md) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .word-counter {
+    max-width: 70%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  textarea {
+    font-size: 18px;
+  }
+}
+
+/* Large devices (lg) */
+@media (min-width: 769px) and (max-width: 992px) {
+  .word-counter {
+    max-width: 60%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  textarea {
+    font-size: 20px;
+  }
+}
+
+/* Extra-large devices (xl) */
+@media (min-width: 993px) {
+  .word-counter {
+    max-width: 50%;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  textarea {
+    font-size: 22px;
+  }
+}
+
+
+

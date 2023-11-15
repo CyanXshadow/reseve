@@ -1,0 +1,117 @@
+JS is programming language
+-->used to make the static webpages as dynamic
+-->It is often used in client side validartion
+-->JS versions will be referred as ES versions
+-->latest ES9. Most commonly used version is ES6
+--> ES-EMCAScript
+-->JS is an interpreter software[scans code line by line]
+-->It is a loosely-coupled  language[datatpe can be modified
+                                eg:- int a =10; 
+                                     a = "Hello";//Type mismatch will not occur]
+
+Ways to work with JS
+1. INternal scripting --> Inside the same document using script tag 
+2. External scripting --> Separate JS file and connecting it with 
+                          current HTML file using <script src="filePath"/>
+
+Dispaly the outputs in JS
+1. alert("Message"); --> dialog box
+2. document.write("Message"); --> new page
+3. document.getElementById("idName").innerHTML = "Message"; -->same page
+4. console.log("Message); --> console Window
+
+JS comments
+1. Single line comment --> //
+2. Mulitline comment --> /* */
+
+JS variables
+Syntax
+keyword varName = value
+
+JS keywords for creating variables
+1. var --> Global --> accessible throughtout the scripting
+2. Let --> Local --> accessible only within the block
+3. const --> constant --> cannot be modified
+
+JS datatypes
+1. String --> includes character --> denoted as '' or "" or ``[Template literals]
+2. Number --> includes whole and decimal Number
+3. Boolean --> true or false
+4. null --> Empty [valid value]
+5. undefined --> It means the value is not inintialized yet.
+
+JS functions
+syntax:
+function functionName(arguments){
+
+}
+by default, every function will return the value, undefined
+So that, we can make two types functions
+1. With arguments
+2. Without arguments
+
+Events
+onclick --> the normal button is clicked
+<form onclick="abc()"><button>Click</button></form>
+
+onsubmit --> the submit buttion clicked
+<form onsubmit="abc()"><button type=submit>Click</button></form>
+
+onfocus --> when the input box is clicked
+<input onfocus="abc()" />
+
+onblur --> when the input is taken back from place
+<input onblur="abc()" />
+
+onkeyup --> when the key is pressed
+onchange --> when there is a change in input
+onmouseover --> when the mouse is hovered over it
+
+JS conditional statements:-
+1.if
+2.else if
+3.else
+4.nested if
+5.ladder if
+
+JS Loops:-
+1.for
+2.while
+3.do while
+
+JS objects(should go with key and value pair)
+1.Object literals
+2.new keyword
+
+Arrow function:-
+
+     //Normal function
+     function abc(a){
+          console.log(a);
+     }
+     
+     //storing a function in a vairable
+     const abc = function(a){
+          console.log(a);
+     }
+     
+     //Arrow function
+     const abc = (a) => {console.log(a);}
+
+JS array
+1.Array literals
+2.array keyword
+3.array constructor
+
+Array methods
+1.concat -> merge two arrays -> arr1.concat(arr2); -> it does not change the original array
+2.filter -> arr1.filter
+3.every -> arr1.every()
+4.find
+5.indexOf
+6.lastIndexOf
+7.some
+8.map
+
+let makes it local variable so it can be modified
+const makes it global variable so it cannot be modified

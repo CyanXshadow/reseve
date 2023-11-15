@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="i1" placeholder="Enter first number" />
+    <input type="text" id="i2" placeholder="Enter second number" />
+    <button onclick="multiply()" id="multiplybtn">Multiply</button>
+    <button onclick="reset()">Reset</button>
+    <p id="i3">Result: </p>
+
+    <script>
+        document.getElementById("multiplybtn").addEventListener("click", multiply)
+        function multiply(){
+            var i1 = document.getElementById("i1").value;
+            var a = Number.parseInt(i1);
+            var i2 = document.getElementById("i2").value;
+            var b = Number.parseInt(i2);
+            var prod = a*b;
+            console.log(prod);
+            document.getElementById("i3").innerHTML = "Result: "+ prod;
+        }
+    </script>
+    <script>
+        function reset(){
+
+        }
+    </script>
+</body>
+</html>

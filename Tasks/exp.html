@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exterior Table Border</title>
+    <style>.exterior-border {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    .exterior-border td {
+        padding: 8px;
+        border: 1px solid black;
+        position: relative;
+    }
+    
+    .exterior-border td::before,
+    .exterior-border td::after {
+        content: '';
+        position: absolute;
+        border: 1px solid black;
+    }
+    
+    .exterior-border td::before {
+        top: -1px;
+        left: -1px;
+        width: 100%;
+        height: 1px;
+    }
+    
+    .exterior-border td::after {
+        top: 100%;
+        left: -1px;
+        width: 1px;
+        height: 1px;
+    }
+    </style>
+</head>
+<body>
+    <table class="exterior-border">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+        </tr>
+    </table>
+</body>
+</html>

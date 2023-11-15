@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>peeks out bitch</h1>
+    <p id="demo"> </p>
+    <script>
+        alert("HI");
+        document.write("WELCOME"+"<br/>");
+        console.log("HELLO");
+        document.getElementById("demo").innerHTML = "GM";
+
+        //Variable
+        var a = 10;
+        var b = 20;
+        var c = a+b;
+        console.log(c);
+
+        var d = 10; 
+        var e = "20";
+        var f = d+e;
+        console.log(f);//10+"20" = "1020"
+        var g = null;
+        var h;
+        console.log(g);// null
+        console.log(h);// undefined
+
+        document.write(g+"<br />");//null
+        document.write(f+"<br />");//"1020"
+
+        //function
+        function abc(){
+            console.log("M1");
+        }
+        abc();//M1
+        console.log(abc());//M1 undefined
+
+        function def(){
+            console.log("M2");
+            return 30;
+        }
+        def(); //M2
+        console.log(def());//M2 30
+
+        function lmn(a,b){
+            console.log("M3 have " + a + " " + b);
+            return a+b;
+        }
+        lmn(400,600);//M3 have 400 600
+        console.log(lmn());//M3 have undefined undefined, NaN(undefined + undefined --> NaN)
+        console.log(lmn(400,600));//M3 have 400 600, 1000 
+    </script>
+</body>
+</html>

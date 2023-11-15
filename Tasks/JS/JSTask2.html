@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="text" type="text" placeholder="Input text to return alphabetical">
+    <button onclick="alpha()">Click to proceed</button>
+    <p id="output">
+        The output in alphabetical order is: 
+    </p>
+    <script>
+        function alpha(){
+            let a = document.getElementById("text").value;
+            let b = a.split('').sort().join('');
+            document.getElementById("output").innerHTML="The output in alphabetical order is: " + b;
+        }
+    </script>
+</body>
+</html>

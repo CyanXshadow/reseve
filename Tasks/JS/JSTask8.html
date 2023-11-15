@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture Animation</title>
+    <style>
+
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #animation-container {
+            width: 300px;
+            height: 300px;
+            background-color: lightgray;
+            position: relative;
+        }
+        #animated-picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        .button-container {
+            display: flex;
+        }
+        #start-button, #stop-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="center-container">
+        <div id="animation-container">
+            <img id="animated-picture" src="./train.gif" alt="Animated Picture">
+        </div>
+        <div class="button-container">
+            <button id="start-button">Start</button>
+            <button id="stop-button">Stop</button>
+        </div>
+    </div>
+
+    <script>
+
+        const animationContainer = document.getElementById("animation-container");
+        const animatedPicture = document.getElementById("animated-picture");
+        const startButton = document.getElementById("start-button");
+        const stopButton = document.getElementById("stop-button");
+
+        let animationInterval;
+
+        function startAnimation() {
+            animatedPicture.style.display = "block";
+            let leftPosition = 0;
+            animationInterval = setInterval(() => {
+                leftPosition += 2;
+                animatedPicture.style.left = leftPosition + "px";
+                if (leftPosition >= animationContainer.clientWidth) {
+                    leftPosition = -animatedPicture.width;
+                }
+            }, 10);
+        }
+
+        function stopAnimation() {
+            clearInterval(animationInterval);
+            animatedPicture.style.display = "none";
+            animatedPicture.style.left = "0";
+        }
+
+        startButton.addEventListener("click", startAnimation);
+        stopButton.addEventListener("click", stopAnimation);
+    </script>
+</body>
+</html>

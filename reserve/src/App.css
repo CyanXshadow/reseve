@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.img_int {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 55%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: width 0.3s;
+  animation: slideFromleft 2s ease-out;
+}
+
+@keyframes slideFromleft {
+  0% {
+      left: -45%;
+  }
+
+  100% {
+      left: 3%;
+  }
+}
+
+h1 {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  color: white;
+  font-family: dosis;
+  font-style: normal;
+  font-size: 90px;
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.tables {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  display: flex;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.interior {
+  border-radius: 5px;
+  border: 5px solid rgba(243, 7, 7, 0.61);
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+  margin: 10px;
+}
+
+.img2 {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
+  margin: 10px;
+}
+
+.img2:hover {
+  transform: scale(1.5);
+}
+
+.img:hover {
+  transform: scale(1.5);
+}
+
+.interior_rest {
+  border-radius: 5px;
+  border: 5px solid rgb(255, 236,255);
+  width: 62%;
+  height: 63%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 16%;
+}
+
+.img3 {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  background-color: white;
+  border: 3px solid white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: -25px;
+}
+
+select {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  border: 3px solid white;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
+button {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  width: 30%;
+  height: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: larger;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+.topt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.in_td{
+  padding: 10px;
+}
+

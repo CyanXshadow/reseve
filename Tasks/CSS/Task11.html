@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div11 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .submit {
+            background-color: rgb(76, 176, 80);
+            color: white;
+            height: 30px;
+            width: 500px;
+            border-color: rgb(76, 176, 80);
+        }
+
+        .input12 {
+            height: 30px;
+            width: 70px;
+            background-color: rgb(255, 54, 54);
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+
+        .div115 {
+            display: flex;
+            width: 500px;
+            height: 50px;
+            background-color: rgb(241, 241, 241);
+        }
+
+        p {
+            color: indigo;
+            padding-left: 314px;
+            padding-top: 5px;
+        }
+
+        a {
+            color: indigo;
+        }
+
+        .innerdiv {
+            padding-top: 16px;
+        }
+
+        .thumbnail {
+            width: 500px;
+            height: 350px;
+            border: 0px;
+            margin: 0px;
+            padding-left: 0px;
+        }
+
+        .maindiv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .thumbnail-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .full-size-icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .full-size-icon::after {
+            content: "↗";
+
+        }
+
+        #closuserimage::after {
+            content: "x";
+        }
+
+        .userimage {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent background */
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .userimage img {
+            max-width: 80%;
+            max-height: 80vh;
+        }
+
+        .userimage:target {
+            display: flex;
+        }
+
+        .userimage:target+.thumbnail-container .full-size-icon {
+            display: none;
+        }
+        .subdiv{
+            align-self: auto;
+            padding-right: 390px;
+        } 
+        .supremediv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="supremediv">
+        <div class="maindiv">
+            <div class="thumbnail-container">
+                <img src="testsubjectthumbnail.jpg" class="thumbnail" id="thumbnail">
+                <a href="#fullImageuserimage" class="full-size-icon"></a>
+            </div>
+            <div id="fullImageuserimage" class="userimage">
+                <a href="#thumbnail" class="full-size-icon" id="closeuserimage">close</a>
+                <img src="testsubject.jpg">
+            </div>
+            <div class="div11">
+                <label for="an" style="font-weight: bold;">Username</label>
+                <input style="width: 500px; height: 30px;" type="text" placeholder="Enter Username">
+            </div><br>
+            <div class="div11">
+                <label for="an" style="font-weight: bold;">Password</label>
+                <input style="width: 500px; height: 30px;" type="password" placeholder="Enter Password">
+            </div></br>
+            <div class="login">
+                <input style="height:40px" class="submit" type="submit" value="Login" />
+            </div>
+            <div class="subdiv"><br>
+                <input type="checkbox">Remember me
+            </div><br>
+        </div>
+        <div class="maindiv">
+            <div class="div115">
+                <div class="innerdiv"><input class="input12" type="Submit" value="Cancel" /></div>
+                <p class="p12">Forgot <a href="#">password?</a></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

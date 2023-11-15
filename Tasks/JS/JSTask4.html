@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+    <button type="button" onclick="date()">get date</button>
+    <p id="getdate"></p>
+    </p>
+    <p>
+    <button type="button" onclick="time()">get time</button>
+    <p id="gettime"></p>
+    </p>
+    <script>
+        function date(){
+            let newdate = new Date();
+            let year = newdate.getFullYear();
+            const monthname = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            let month = monthname[newdate.getMonth()];
+            let day = newdate.getDate();
+            document.getElementById("getdate").innerHTML=day + "/" + month +"/" + year;
+        }
+        function time(){
+            const date = new Date();
+            document.getElementById("gettime").innerHTML=date;
+        }
+    </script>
+</body>
+</html>

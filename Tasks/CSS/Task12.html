@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(162,43,85);
+        }
+        .div123{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20%;
+            background-color: rgb(117,32,63);
+            padding: 10px 90px;
+        }
+        .Table11,.td{
+            background-color: rgb(117, 32, 63);
+        }
+        .tr111,.tr112,.tr113,.tr114,.tr115,.tr116,.tr117,.tr118,.tr119{
+            color: White;
+        }
+        .td111,.td112,.td113,.td114,.td115,.td117,.td118,.td119{
+            height:20px;
+        }
+        input{
+            border: none;
+            background-color: white;
+        }
+        option{
+            background-color: whitesmoke;
+        }
+        .input118{
+            padding-left: 1px;
+            vertical-align: top;
+            height: 40px;
+            width: 150px;
+        }
+        .input119{
+            font-size: medium;
+            font-weight: bold;
+            border-radius: 5px;
+            height: 30px;
+            width: 300px;
+        }
+        .select12{
+            display: flex;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <div class="div123">
+            <table class="Table11" cellspacing="5px">
+                <tr class="tr111" style="color: white;">
+                    <td><label for="fn">Name:</label></td>
+                    <td class="td111"><input type="text" name="fn" placeholder="your name" maxlength="30" required></td>
+                </tr>
+                <tr class="tr112">
+                    <td><label for="an">Email:</label></td>
+                    <td class="td112"><input type="email" name="an" placeholder="your email" maxlength="30" required></td>
+                </tr>
+                <tr class="tr113">
+                    <td><label for="bn">Password:</label></td>
+                    <td class="td113"><input type="password" name="bn" placeholder="" required></td>
+                </tr>
+                <tr class="tr114">
+                    <td><label for="cn">Phone Number:</label></td>
+                    <td class="td114"><input type="number" name="cn" placeholder="" maxlength="10" minlength="10" required></td>
+                </tr>
+                <tr class="tr115">
+                    <td><label for="dn">Gender:</label></td>
+                    <td class="td115">Male:<input class="in1" type="radio" name="dn">Female:<input class="in2" type="radio" name="dn">Other:<input class="in3" type="radio" name="dn"></td>
+                </tr>
+                <tr class="tr116">
+                    <td><label for="en">Language</label></td>
+                    <td>
+                        <select class="select12" name="en" required style="background-color: whitesmoke;">
+                            <option value="Select language">Select language</option>
+                            <option value="female">English</option>
+                            <option value="others">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="tr117">
+                    <td><label for="gn">Zip Code:</label></td>
+                    <td class="td117"><input type="number" name="gn" maxlength="6" minlength="6" required></td>
+                </tr>
+                <tr class="tr118">
+                    <td><label for="hn" style="vertical-align: top;">About:</label></td>
+                    <td td="118"><textarea style="background-color: white;" class="input118" type="text" name="hn" placeholder="Write about yourself..." maxlength="120" required ></textarea></td>
+                </tr><br>
+                <tr class="tr119">
+                    </td>
+                </tr><br>
+                <td class="td119" colspan="2"><button class="input119" type="button" value="Register"></
+            </table>
+        </div>
+    </center>
+</body>
+</html>

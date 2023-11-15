@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        .custom-alert {
+            font-size: 16px; /* Adjust the font size as needed */
+            margin: 4px;
+            padding: 5px; /* Adjust the padding as needed */
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+        <form action="https://www.ethnus.com" onsubmit="return validate()" class="form m-5">
+            <table>
+                <tr>
+                    <td class="text-center"><h2>Gmail Login</h2></td>
+                </tr>
+                <tr>
+                    <td><input id="i1" class="form-control my-2" type="text" placeholder="Username"/></td>
+                    <td id="invalid-msg"></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+                <tr>
+                    <td><input id="i2" class="form-control my-2" type="password" placeholder="Password"/></td>
+                    <td id="invalid-msg1"></td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td class="text-center"><button type="submit" class="btn btn-primary">Log in</button></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <script>
+        function validate(){
+            var un = document.getElementById("i1").value;
+            var pwd = document.getElementById("i2").value;
+
+            var isValid = true;
+
+            if(un.length<5){
+                document.getElementById("invalid-msg").innerHTML = `<p class="custom-alert alert alert-danger alert-lg">Invalid username</p>`;
+                isValid = false;
+            }
+            else{
+                document.getElementById("invalid-msg").innerHTML = '';
+            }
+
+            if(pwd.length<5){
+                document.getElementById("invalid-msg1").innerHTML = `<p class="custom-alert alert alert-danger">Invalid password</p>`;
+                isValid = false;
+            }
+            else{
+                document.getElementById("invalid-msg1").innerHTML = '';
+            }
+
+            if(pwd.length==0){
+                document.getElementById("invalid-msg1").innerHTML = `<p class="custom-alert alert alert-danger">Enter password</p>`;
+                isValid = false;
+            }
+
+            // if (!isValid) {
+            //     event.preventDefault();
+            // }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html> 
